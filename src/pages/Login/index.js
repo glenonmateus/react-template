@@ -9,6 +9,7 @@ const Login = () => {
         <small>System</small>
       </Title>
       <Paragraph>Esse é um paragrafo</Paragraph>
+      <button type="button">Enviar</button>
     </Container>
   );
 };
