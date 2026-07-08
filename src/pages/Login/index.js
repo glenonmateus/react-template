@@ -1,4 +1,4 @@
-import { Container } from "../../styles/GlobalStyles";
+import { Container } from "styles/GlobalStyles";
 import { Paragraph, Title } from "./styled";
 
 const Login = () => {
