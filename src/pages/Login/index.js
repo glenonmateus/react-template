@@ -1,7 +1,12 @@
+import { toast } from "react-toastify";
 import { Container } from "styles/GlobalStyles";
 import { Paragraph, Title } from "./styled";
 
 const Login = () => {
+  const displayMessage = () => {
+    toast("Login efetuado com sucesso");
+  };
+
   return (
     <Container>
       <Title>
@@ -9,7 +14,9 @@ const Login = () => {
         <small>System</small>
       </Title>
       <Paragraph>Esse é um paragrafo</Paragraph>
-      <button type="button">Enviar</button>
+      <button type="button" onClick={displayMessage}>
+        Enviar
+      </button>
     </Container>
   );
 };
