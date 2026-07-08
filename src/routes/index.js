@@ -6,7 +6,7 @@ import ProtectedRoute from "routes/ProtectedRoute";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route element={<ProtectedRoute isClosed />}>
+      <Route element={<ProtectedRoute />}>
         <Route path="/" element={<Login></Login>}></Route>
       </Route>
       <Route path="*" element={<NotFound></NotFound>}></Route>
