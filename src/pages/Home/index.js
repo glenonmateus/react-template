@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import * as exampleActions from "store/modules/example/actions";
 import { Container } from "styles/GlobalStyles";
 import { Paragraph, Title } from "./styled";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const botaoClicado = useSelector((state) => state.botaoClicado);
+  const botaoClicado = useSelector((state) => state.example.botaoClicado);
 
   const displayMessage = () => {
-    dispatch({ type: "BOTAO_CLICADO" });
+    dispatch(exampleActions.clicaBotao());
     toast(botaoClicado ? "Botão clicado" : "Botão não clicado");
   };
 
