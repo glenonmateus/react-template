@@ -1,10 +1,15 @@
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { Container } from "styles/GlobalStyles";
 import { Paragraph, Title } from "./styled";
 
-const Login = () => {
+const Home = () => {
+  const dispatch = useDispatch();
+  const botaoClicado = useSelector((state) => state.botaoClicado);
+
   const displayMessage = () => {
-    toast("Login efetuado com sucesso");
+    dispatch({ type: "BOTAO_CLICADO" });
+    toast(botaoClicado ? "Botão clicado" : "Botão não clicado");
   };
 
   return (
@@ -21,4 +26,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Home;
