@@ -1,7 +1,14 @@
 import * as types from "store/modules/types";
 
-const clicaBotao = () => {
-  return { type: types.BOTAO_CLICADO };
+const buttonClickSuccess = () => {
+  return { type: types.BUTTON_CLICK_SUCCESS };
 };
 
-export { clicaBotao };
+const buttonClickFailure = () => {
+  return { type: types.BUTTON_CLICK_FAILURE };
+};
+const buttonClickRequest = () => {
+  return { type: types.BUTTON_CLICK_REQUEST };
+};
+
+export { buttonClickFailure, buttonClickRequest, buttonClickSuccess };

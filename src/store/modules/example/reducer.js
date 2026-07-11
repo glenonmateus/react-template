@@ -1,15 +1,24 @@
 import * as types from "store/modules/types";
 
-const initialState = { botaoClicado: false };
+const initialState = { isClicked: false };
 
 const reducer = (state = initialState, action) => {
   const { type } = action;
 
   switch (type) {
-    case types.BOTAO_CLICADO: {
+    case types.BUTTON_CLICK_SUCCESS: {
+      console.log("Sucesso");
       const newState = { ...state };
-      newState.botaoClicado = !newState.botaoClicado;
+      newState.isClicked = !newState.isClicked;
       return newState;
+    }
+    case types.BUTTON_CLICK_FAILURE: {
+      console.log("Failure");
+      return state;
+    }
+    case types.BUTTON_CLICK_REQUEST: {
+      console.log("Request");
+      return state;
     }
 
     default:
